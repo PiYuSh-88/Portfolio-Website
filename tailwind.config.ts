@@ -9,8 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#0a0a0a", // Apple-style deep black
+        foreground: "#ededed",
+        accent: "#38bdf8", // Sky blue for vibrant contrast
+        cardBg: "#171717",
       },
     },
   },
