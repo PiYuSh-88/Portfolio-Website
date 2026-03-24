@@ -1,101 +1,141 @@
+"use client";
+
 import Section from "./ui/Section";
+import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
 
-export default function CertificationsSection() {
-  const certifications = [
-    {
-      title: "Cloud Computing",
-      issuer: "NPTEL",
-      issuerShort: "NPTEL",
-      description: "Completed a comprehensive course on Cloud Computing covering cloud architecture, deployment models, service models (IaaS, PaaS, SaaS), and cloud security fundamentals.",
-      badge: "🏛️",
-      color: "from-orange-500/20 to-amber-500/5",
-      borderHover: "hover:border-orange-500/40",
-      accentColor: "text-orange-400",
-      link: null, // Will be updated when the user provides the link
-    },
-    {
-      title: "SQL (Advanced)",
-      issuer: "HackerRank",
-      issuerShort: "HackerRank",
-      description: "Demonstrated proficiency in advanced SQL concepts including complex joins, window functions, query optimization, subqueries, and database design principles.",
-      badge: "🟢",
-      color: "from-green-500/20 to-emerald-500/5",
-      borderHover: "hover:border-green-500/40",
-      accentColor: "text-green-400",
-      link: null,
-    },
-    {
-      title: "Software Engineering",
-      issuer: "Coursera",
-      issuerShort: "Coursera",
-      description: "Gained expertise in software engineering principles, design patterns, agile methodologies, version control, testing strategies, and software project management.",
-      badge: "🔵",
-      color: "from-blue-500/20 to-sky-500/5",
-      borderHover: "hover:border-blue-500/40",
-      accentColor: "text-blue-400",
-      link: null,
-    },
-  ];
+const certifications = [
+  {
+    title: "Basic Python towards AI/ML",
+    issuer: "CsePathshala",
+    period: "Oct – Nov 2023",
+    description:
+      "Foundational Python training with a focus on AI/ML applications, covering programming basics, data manipulation, and introductory machine learning concepts.",
+    color: "from-emerald-500/10 to-emerald-500/5",
+    borderHover: "hover:border-emerald-500/40",
+    accentColor: "text-emerald-400",
+    nodeBorder: "group-hover:border-emerald-400/50",
+    link: "https://drive.google.com/file/d/1MxislWygOxlSu-ZMYqDDPQzRgW1Bpbj4/view?usp=sharing",
+  },
+  {
+    title: "Software Engineering (Implementation)",
+    issuer: "Coursera",
+    period: "May 2024",
+    description:
+      "Completed a Coursera course on Software Engineering implementation practices covering design patterns, agile methodologies, version control, testing strategies, and software project management.",
+    color: "from-blue-500/10 to-blue-500/5",
+    borderHover: "hover:border-blue-500/40",
+    accentColor: "text-blue-400",
+    nodeBorder: "group-hover:border-blue-400/50",
+    link: "https://www.coursera.org/account/accomplishments/verify/4CJUJNK4U9DG",
+  },
+  {
+    title: "Cloud Computing",
+    issuer: "NPTEL",
+    period: "Jun – Jul 2024",
+    description:
+      "Comprehensive course on Cloud Computing covering cloud architecture, deployment models, service models (IaaS, PaaS, SaaS), and cloud security fundamentals.",
+    color: "from-orange-500/10 to-orange-500/5",
+    borderHover: "hover:border-orange-500/40",
+    accentColor: "text-orange-400",
+    nodeBorder: "group-hover:border-orange-400/50",
+    link: "https://drive.google.com/file/d/13xZEGqOlDPWjgJ1qlEpywvQIC_nvYTFQ/view?usp=sharing",
+  },
+  {
+    title: "Introduction to Artificial Intelligence",
+    issuer: "Google",
+    period: "Mar 2026",
+    description:
+      "Explored the fundamental concepts of Artificial Intelligence, machine learning applications, and how AI is transforming various industries using Google's frameworks.",
+    color: "from-sky-500/10 to-sky-500/5",
+    borderHover: "hover:border-sky-500/40",
+    accentColor: "text-sky-400",
+    nodeBorder: "group-hover:border-sky-400/50",
+    link: "https://coursera.org/share/74bb0b6b785ef82c3d763a28c8537f73",
+  },
+];
 
+export default function CertificationsSection() {
   return (
     <Section id="certifications">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
             Certifications<span className="text-accent">.</span>
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
-            Credentials that validate my expertise across cloud, data, and software engineering.
+            Credentials that validate my expertise across AI/ML, cloud, and software development.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {certifications.map((cert, i) => (
-            <div
-              key={i}
-              className={`relative flex flex-col p-8 rounded-3xl bg-cardBg border border-white/10 ${cert.borderHover} transition-all duration-300 group hover:-translate-y-2 overflow-hidden`}
-            >
-              {/* Background gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-white/10 hidden sm:block" />
 
-              {/* Issuer badge */}
-              <div className="flex items-center justify-between mb-6 relative z-10">
-                <span className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-white/5 border border-white/10 ${cert.accentColor}`}>
-                  {cert.issuerShort}
-                </span>
-                <Award size={22} className={`${cert.accentColor} opacity-70`} />
-              </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-3 relative z-10">{cert.title}</h3>
-
-              {/* Description */}
-              <p className="text-white/55 text-sm leading-relaxed flex-grow relative z-10">
-                {cert.description}
-              </p>
-
-              {/* View Certificate link */}
-              <div className="mt-8 relative z-10">
-                {cert.link ? (
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 text-sm font-medium ${cert.accentColor} hover:text-white transition-colors`}
+          <div className="flex flex-col gap-10">
+            {certifications.map((cert, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                className="flex gap-6 items-start group"
+              >
+                {/* Timeline node */}
+                <div className="relative shrink-0 hidden sm:flex">
+                  <div
+                    className={`w-10 h-10 rounded-full bg-cardBg border border-white/10 ${cert.nodeBorder} transition-colors duration-300 flex items-center justify-center z-10`}
                   >
-                    <ExternalLink size={15} /> View Certificate
-                  </a>
-                ) : (
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-white/25 cursor-default">
-                    <ExternalLink size={15} /> Certificate Link Coming Soon
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
+                    <Award className={cert.accentColor} size={18} />
+                  </div>
+                </div>
+
+                {/* Card */}
+                <div
+                  className={`flex-1 p-6 rounded-2xl bg-cardBg border border-white/5 ${cert.borderHover} transition-all duration-300 relative overflow-hidden`}
+                >
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
+                  />
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between flex-wrap gap-2 mb-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="sm:hidden">{<Award className={cert.accentColor} size={16} />}</span>
+                        <h3 className="text-lg font-semibold text-white/90">{cert.title}</h3>
+                      </div>
+                      <span className={`text-xs font-medium ${cert.accentColor} bg-white/5 border border-white/10 px-2 py-0.5 rounded-full`}>
+                        {cert.period}
+                      </span>
+                    </div>
+                    <p className={`text-sm font-bold uppercase tracking-widest ${cert.accentColor} mb-2`}>
+                      {cert.issuer}
+                    </p>
+                    <p className="text-white/55 text-sm leading-relaxed mb-4">
+                      {cert.description}
+                    </p>
+
+                    {cert.link ? (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-2 text-sm font-medium ${cert.accentColor} hover:text-white transition-colors`}
+                      >
+                        <ExternalLink size={14} /> View Certificate
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-2 text-sm font-medium text-white/25 cursor-default">
+                        <ExternalLink size={14} /> Certificate Link Coming Soon
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </Section>
