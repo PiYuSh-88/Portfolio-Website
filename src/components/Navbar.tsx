@@ -7,9 +7,9 @@ import { useState } from "react";
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
-  { name: "Certifications", href: "#certifications" },
+  { name: "Projects", href: "#projects" },
+  { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -57,7 +57,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Nav Button (Could be expanded later) */}
+        {/* Mobile Nav Button */}
         <div className="md:hidden">
           <Link href="#contact" className="text-sm font-medium border border-white/20 px-4 py-2 rounded-full text-white/90">
             Contact Me
