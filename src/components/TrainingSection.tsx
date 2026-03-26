@@ -1,5 +1,5 @@
 import Section from "./ui/Section";
-import { BookOpen, ExternalLink } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 export default function TrainingSection() {
   const trainings = [

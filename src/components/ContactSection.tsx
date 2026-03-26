@@ -1,5 +1,5 @@
 import Section from "./ui/Section";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function ContactSection() {
   return (
