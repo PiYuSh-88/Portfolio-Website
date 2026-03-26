@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <div className="w-full max-w-6xl flex items-center justify-between">
         <Link href="#home" className="text-xl font-extrabold tracking-tighter text-white hover:text-accent transition-colors">
-          AP<span className="text-accent">.</span>
+          P<span className="text-accent">.</span>
         </Link>
         <div className="hidden md:flex gap-8">
           {navLinks.map((link) => (

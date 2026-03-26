@@ -15,29 +15,17 @@ export default function ContactSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Email */}
           <a
-            href="mailto:akshitprashar14@gmail.com"
+            href="mailto:piyushpat3388@gmail.com"
             className="inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-white/90 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.2)] w-full sm:w-auto"
           >
             <Mail size={22} />
             Drop me an Email
           </a>
 
-          {/* Phone */}
-          <a
-            href="tel:+916005455974"
-            className="inline-flex items-center justify-center gap-3 border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/40 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto"
-          >
-            <Phone size={22} />
-            Call Me
-          </a>
         </div>
 
         {/* Contact details */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 text-white/40 text-sm">
-          <span>akshitprashar14@gmail.com</span>
-          <span className="hidden sm:block">·</span>
-          <span>+91 60054-55974</span>
-        </div>
+          <span>piyushpat3388@gmail.com</span>
       </div>
     </Section>
   );

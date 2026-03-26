@@ -15,7 +15,6 @@ const certifications = [
     borderHover: "hover:border-emerald-500/40",
     accentColor: "text-emerald-400",
     nodeBorder: "group-hover:border-emerald-400/50",
-    link: "https://drive.google.com/file/d/1MxislWygOxlSu-ZMYqDDPQzRgW1Bpbj4/view?usp=sharing",
   },
   {
     title: "Software Engineering (Implementation)",
@@ -27,7 +26,6 @@ const certifications = [
     borderHover: "hover:border-blue-500/40",
     accentColor: "text-blue-400",
     nodeBorder: "group-hover:border-blue-400/50",
-    link: "https://www.coursera.org/account/accomplishments/verify/4CJUJNK4U9DG",
   },
   {
     title: "Cloud Computing",
@@ -39,7 +37,6 @@ const certifications = [
     borderHover: "hover:border-orange-500/40",
     accentColor: "text-orange-400",
     nodeBorder: "group-hover:border-orange-400/50",
-    link: "https://drive.google.com/file/d/13xZEGqOlDPWjgJ1qlEpywvQIC_nvYTFQ/view?usp=sharing",
   },
   {
     title: "Introduction to Artificial Intelligence",
@@ -51,7 +48,6 @@ const certifications = [
     borderHover: "hover:border-sky-500/40",
     accentColor: "text-sky-400",
     nodeBorder: "group-hover:border-sky-400/50",
-    link: "https://coursera.org/share/74bb0b6b785ef82c3d763a28c8537f73",
   },
 ];
 
@@ -117,20 +113,6 @@ export default function CertificationsSection() {
                       {cert.description}
                     </p>
 
-                    {cert.link ? (
-                      <a
-                        href={cert.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 text-sm font-medium ${cert.accentColor} hover:text-white transition-colors`}
-                      >
-                        <ExternalLink size={14} /> View Certificate
-                      </a>
-                    ) : (
-                      <span className="inline-flex items-center gap-2 text-sm font-medium text-white/25 cursor-default">
-                        <ExternalLink size={14} /> Certificate Link Coming Soon
-                      </span>
-                    )}
                   </div>
                 </div>
               </motion.div>

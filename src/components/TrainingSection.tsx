@@ -15,7 +15,6 @@ export default function TrainingSection() {
         "Strengthened OOP and clean coding practices",
       ],
       tags: ["Java", "DSA", "Algorithms", "Problem Solving"],
-      link: "https://www.cipherschools.com/certificate/preview?id=688c4c8839a767513ab91544"
     },
   ];
 
@@ -68,19 +67,6 @@ export default function TrainingSection() {
                 ))}
               </div>
 
-              {/* Certificate Link */}
-              {training.link && (
-                <div className="mt-4 pt-4 border-t border-white/5">
-                  <a
-                    href={training.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-white transition-colors"
-                  >
-                    <ExternalLink size={15} /> View Certificate
-                  </a>
-                </div>
-              )}
             </div>
           </div>
         ))}

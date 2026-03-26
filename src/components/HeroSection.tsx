@@ -36,7 +36,7 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight"
             >
-              Akshit Prashar
+              Piyush
             </motion.h1>
 
             <motion.h3
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 </motion.button>
               </Link>
 
-              <a href="https://drive.google.com/file/d/1j9LR-Uy21W-hyIdHE43r-9etH3-Wem1_/view" download="Akshit_Prashar_CV.pdf">
+              <a href="https://drive.google.com/file/d/1CVdfMy2mhtYq8c0puIf1UmCGebnb3g5f/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -101,7 +101,7 @@ export default function HeroSection() {
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white/10">
                 <Image
                   src="/profile.png"
-                  alt="Akshit Prashar"
+                  alt="Piyush"
                   fill
                   className="object-cover object-top"
                   priority
