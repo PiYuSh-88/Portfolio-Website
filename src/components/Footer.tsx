@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Piyush. All rights reserved.
         </p>
         <div className="flex gap-4">
-          <a href="https://github.com/Projects1424/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors" aria-label="GitHub">
+          <a href="https://github.com/PiYuSh-88/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors" aria-label="GitHub">
             <Github size={20} />
           </a>
           <a href="https://linkedin.com/in/piyush-2415b3222/?skipRedirect=true" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors" aria-label="LinkedIn">

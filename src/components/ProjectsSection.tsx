@@ -9,39 +9,39 @@ export default function ProjectsSection() {
       title: "GitHub Repo Explainer",
       description: "An LLM-powered application that takes a GitHub repository URL, analyzes the codebase using OpenRouter API, and generates structured explanations for developers.",
       tech: ["Next.js", "TypeScript", "LLMs", "Tailwind CSS"],
-      github: "https://github.com/Projects1424/Github-Repo-Explainer",
+      github: "https://github.com/PiYuSh-88/Github-Repo-Explainer",
     },
     {
       title: "RecoSphere – Recommendation System",
       description: "A robust ML-based recommendation engine capable of providing highly accurate suggestions based on user behavior and collaborative filtering algorithms.",
       tech: ["Python", "Scikit-Learn", "FastAPI", "Pandas"],
-      github: "https://github.com/Projects1424/RecoSphere---Recommendation-system",
+      github: "https://github.com/PiYuSh-88/RecoSphere---Recommendation-system",
       live: "https://reco-sphere-recommendation-system.vercel.app/",
     },
     {
       title: "SmartPark – Parking System",
       description: "A smart parking management system using Machine Learning and Computer Vision (CNN + OpenCV) to detect parking slot occupancy with a PyQt desktop interface.",
       tech: ["Python", "CNN", "OpenCV", "PyQt"],
-      github: "https://github.com/Projects1424/SmartPark-Parking-System",
+      github: "https://github.com/PiYuSh-88/SmartPark-Parking-System",
     },
     {
       title: "LeetCode Progress Analyzer",
       description: "A developer dashboard that fetches LeetCode user data via GraphQL, visualizes problem-solving trends with Chart.js, and provides AI-powered study suggestions.",
       tech: ["Next.js", "TypeScript", "GraphQL", "Chart.js"],
-      github: "https://github.com/Projects1424/Leetcode-Progress-Analyzer",
+      github: "https://github.com/PiYuSh-88/Leetcode-Progress-Analyzer",
       live: "https://leetcode-progress-analyzer.vercel.app/",
     },
     {
       title: "Gov FAQ – NLP Chatbot",
       description: "An NLP-powered chatbot that answers government-related frequently asked questions, making public information more accessible through natural language queries.",
       tech: ["Python", "NLP", "TF-IDF", "Flask"],
-      github: "https://github.com/Projects1424/Government-related-Frequently-asked-Questions-using-NLP",
+      github: "https://github.com/PiYuSh-88/Government-related-Frequently-asked-Questions-using-NLP",
     },
     {
       title: "Learning Management System",
       description: "A full-featured Learning Management System that enables course creation, student enrollment, progress tracking, and assignment management for educators.",
       tech: ["Java", "MySQL", "Spring Boot", "REST API"],
-      github: "https://github.com/Projects1424/Learning-Management-System",
+      github: "https://github.com/PiYuSh-88/Learning-Management_System",
     },
   ];
 
@@ -49,7 +49,7 @@ export default function ProjectsSection() {
     <Section id="projects" className="bg-black/20 w-full max-w-none">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight text-center">
-          Projects1424 Projects<span className="text-accent">.</span>
+          PiYuSh-88 Projects<span className="text-accent">.</span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
@@ -101,7 +101,7 @@ export default function ProjectsSection() {
         {/* View All on GitHub CTA */}
         <div className="flex justify-center mt-14">
           <a
-            href="https://github.com/Projects1424/"
+            href="https://github.com/PiYuSh-88/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 text-white/80 hover:text-white hover:border-accent/60 hover:bg-accent/10 transition-all duration-300 font-medium"
